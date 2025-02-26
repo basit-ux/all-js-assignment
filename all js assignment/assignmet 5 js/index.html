@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+var fullName = firstName + " " + lastName;
+alert("Hello, " + fullName);
+
+
+var phoneModel = prompt("Enter your favorite mobile phone model:");
+alert("Length: " + phoneModel.length);
+
+
+var word1 = "Pakistani";
+alert("Index of 'n': " + word1.indexOf('n'));
+
+
+var word2 = "Hello World";
+alert("Last index of 'l': " + word2.lastIndexOf('l'));
+
+
+alert("Character at index 3: " + word1.charAt(3));
+
+
+var fullNameConcat = firstName.concat(" ", lastName);
+alert("Hello, " + fullNameConcat);
+
+
+var city = "Hyderabad";
+alert("Replaced: " + city.replace("Hyder", "Islam"));
+
+
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+alert("Replaced message: " + message.replace(/and/g, "&"));
+
+var numString = "472";
+var num = Number(numString);
+alert("Value: " + num + ", Type: " + typeof num);
+
+
+var url = prompt("Enter a URL (e.g., www.facebook.com):");
+var domain = url.split('.')[1]; 
+alert("Domain name: " + domain);
+
+
+var inputUpper = prompt("Enter something:");
+alert("Uppercase: " + inputUpper.toUpperCase());
+
+
+var inputLower = prompt("Enter something:");
+alert("Lowercase: " + inputLower.toLowerCase());
+
+
+function toTitleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+}
+var titleCaseInput = prompt("Enter something:");
+alert("Title case: " + toTitleCase(titleCaseInput));
+
+
+var num = 35.36;
+var numStringWithoutDot = num.toString().replace('.', '');
+alert("Number without dot: " + numStringWithoutDot);
+
+
+var a = "3";
+var b = "3";
+var x = a + b; 
+alert("Value of x: " + x);
+
+
+var y = a - b; 
+alert("Value of y: " + y);
+
+
+var username = prompt("Enter your username:");
+if (/[@.,!]/.test(username)) {
+    alert("Invalid username. Please enter a valid username.");
+} else {
+    alert("Valid username.");
+}
+
+
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var searchItem = prompt("Enter item to search:");
+var found = A.map(function(item) {
+    return item.toLowerCase();
+}).includes(searchItem.toLowerCase());
+alert(found ? "Item found." : "Item not found.");
+
+
+var str1 = prompt("Enter first string:");
+var str2 = prompt("Enter second string:");
+if (str1 > str2) {
+    alert("First string is greater.");
+} else if (str1 < str2) {
+    alert("Second string is greater.");
+} else {
+    alert("Both strings are equal.");
+}
+
+
+var password = prompt("Enter your password:");
+if (/^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/.test(password) && !/^\d/.test(password)) {
+    alert("Valid password.");
+} else {
+    alert("Invalid password. Please follow the requirements.");
+}
+
+
+var university = "University of Karachi";
+var universityArray = university.split(" ");
+alert("Array: " + universityArray.join(", "));
+
+
+var userInput = prompt("Enter something:");
+alert("Last character: " + userInput.charAt(userInput.length - 1));
+
+
+var phrase = "The quick brown fox jumps over the lazy dog";
+var count = (phrase.match(/the/gi) || []).length;
+alert("Occurrences of 'the': " + count);
+
+
+var str = "Pakistan";
+var vowels = str.match(/[aeiou]/gi);
+var consonants = str.match(/[^aeiou]/gi);
+alert("Vowels: " + (vowels ? vowels.length : 0) + ", Consonants: " + (consonants ? consonants.length : 0));
+
+    </script>
+</body>
+</html>
